@@ -30,7 +30,7 @@ jobs:
           command: |
             . venv/bin/activate
             jupyter-nbconvert Linear_Regression.ipynb
-            mkdir -p test-reports
+            mkdir -p test_reports
             mv Linear_Regression.html test_reports/
             
       - store_artifacts:
