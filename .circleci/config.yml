@@ -15,8 +15,6 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: ~/Andrew_repository
-
     steps:
       - checkout
 
@@ -49,7 +47,7 @@ jobs:
           command: |
             . venv/bin/activate
             jupyter-nbconvert Linear_Regression.ipynb
-            mkdir test-reports
+            mkdir -p test-reports
             mv Linear_Regression.html test_reports
             
       - store_artifacts:
