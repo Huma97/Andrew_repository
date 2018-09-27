@@ -49,6 +49,8 @@ jobs:
           command: |
             . venv/bin/activate
             jupyter-nbconvert Linear_Regression.ipynb
+            mkdir test-reports
+            mv Linear_Regression.html test_reports
             
       - store_artifacts:
           path: test-reports
