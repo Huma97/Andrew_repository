@@ -1,20 +1,9 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:3.7.0
       
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
     steps:
       - checkout
 
@@ -31,7 +20,7 @@ jobs:
             . venv/bin/activate
             jupyter-nbconvert Linear_Regression.ipynb
             mkdir -p test_reports
-            mv Linear_Regression.html test_reports/
+            mv Linear_Regression.html test_reports
             
       - store_artifacts:
           path: test_reports
