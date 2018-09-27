@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:2.7.14
+      - image: circleci/python:3.7.0
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -21,7 +21,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python2 -m virtualenv venv
+            python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
         
@@ -31,7 +31,7 @@ jobs:
             . venv/bin/activate
             jupyter-nbconvert Linear_Regression.ipynb
             mkdir -p test-reports
-            mv Linear_Regression.html test_reports
+            mv Linear_Regression.html test_reports/
             
       - store_artifacts:
           path: test-reports
