@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7.0
+      - image: circleci/python:2.7.14
       
     steps:
       - checkout
@@ -10,7 +10,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
+            python2 -m virtualenv venv
             . venv/bin/activate
             pip install -r requirements.txt
         
