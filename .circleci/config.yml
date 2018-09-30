@@ -18,7 +18,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            jupyter-nbconvert Linear_Regression.ipynb
+            jupyter-nbconvert --execute Linear_Regression.ipynb
             mkdir -p test_reports
             mv Linear_Regression.html test_reports
             
