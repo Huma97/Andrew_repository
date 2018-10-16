@@ -26,6 +26,8 @@ jobs:
           name: kaggle
           command: |
             . venv/bin/activate
+            mkdir .kaggle
+            mv kaggle.json .kaggle
             kaggle competitions download titanic
             jupyter --execute Titanic.ipynb
             kaggle competitions submit titanic -f titanic-submission.csv -m "My submission"
