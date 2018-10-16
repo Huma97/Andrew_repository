@@ -31,7 +31,7 @@ jobs:
             mkdir .kaggle
             mv kaggle.json .kaggle
             kaggle competitions download titanic
-            jupyter --execute Titanic.ipynb
+            jupyter-nbconvert --execute Titanic.ipynb
             kaggle competitions submit titanic -f titanic-submission.csv -m "My submission messsage"
             
       - store_artifacts:
