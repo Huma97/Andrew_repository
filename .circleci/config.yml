@@ -30,7 +30,7 @@ jobs:
             export KAGGLE_KEY=07da689b628af9dbee0f5965ba1cf10f
             kaggle competitions download titanic
             jupyter-nbconvert --execute Titanic.ipynb
-            kaggle competitions submit titanic -f titanic-submission.csv -m "My submission messsage"
+            kaggle competitions submit titanic -f titanic-submission.csv -m "My submission"
             
       #- store_artifacts:
       #    path: test_reports
