@@ -3,3 +3,4 @@ jupyter==1.0.0
 scikit-learn==0.19.1
 scipy==1.1.0
 matplotlib==2.2.3
+kaggle==1.4.7.1
