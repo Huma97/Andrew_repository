@@ -1,1 +1,1 @@
-kaggle competitions submit titanic -f titanic-submission.csv
+kaggle competitions submit titanic -f titanic-submission.csv -m "My submission message"
