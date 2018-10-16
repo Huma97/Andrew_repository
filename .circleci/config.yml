@@ -26,6 +26,8 @@ jobs:
           name: kaggle
           command: |
             . venv/bin/activate
+            export KAGGLE_USERNAME=huma97
+            export KAGGLE_KEY=07da689b628af9dbee0f5965ba1cf10f
             mkdir .kaggle
             mv kaggle.json .kaggle
             kaggle competitions download titanic
