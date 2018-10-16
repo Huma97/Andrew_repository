@@ -1,1 +1,1 @@
-kaggle competitions submit titanic
+kaggle competitions submit titanic -f titanic-submission.csv
