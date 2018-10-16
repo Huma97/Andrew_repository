@@ -22,7 +22,7 @@ jobs:
             mkdir -p test_reports
             mv Linear_Regression.html test_reports
         
-       - run:
+      - run:
           name: kaggle
           command: |
             . venv/bin/activate
