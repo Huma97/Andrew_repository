@@ -14,13 +14,13 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
         
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            jupyter-nbconvert --execute Linear_Regression.ipynb
-            mkdir -p test_reports
-            mv Linear_Regression.html test_reports
+     # - run:
+     #     name: run tests
+     #     command: |
+     #       . venv/bin/activate
+     #       jupyter-nbconvert --execute Linear_Regression.ipynb
+     #       mkdir -p test_reports
+     #       mv Linear_Regression.html test_reports
         
       - run:
           name: kaggle
@@ -34,7 +34,7 @@ jobs:
             jupyter-nbconvert --execute Titanic.ipynb
             kaggle competitions submit titanic -f titanic-submission.csv -m "My submission messsage"
             
-      - store_artifacts:
-          path: test_reports
-          destination: test_reports
+      #- store_artifacts:
+      #    path: test_reports
+      #    destination: test_reports
           
