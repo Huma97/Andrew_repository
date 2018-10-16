@@ -28,7 +28,7 @@ jobs:
             . venv/bin/activate
             kaggle competitions download titanic
             jupyter --execute Titanic.ipynb
-            kaggle competitions submit titanic -f titanic-submission.csv -m "My submission message"
+            kaggle competitions submit titanic -f titanic-submission.csv -m "My submission"
             
       - store_artifacts:
           path: test_reports
