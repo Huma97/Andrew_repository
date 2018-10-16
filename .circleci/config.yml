@@ -21,6 +21,12 @@ jobs:
             jupyter-nbconvert --execute Linear_Regression.ipynb
             mkdir -p test_reports
             mv Linear_Regression.html test_reports
+        
+       - run:
+          name: kaggle
+          command: |
+            . venv/bin/activate
+            --execute Titanic.ipynb
             
       - store_artifacts:
           path: test_reports
