@@ -26,8 +26,10 @@ jobs:
           name: kaggle
           command: |
             . venv/bin/activate
+            echo 'export PATH="$GOPATH/bin:$PATH"' >> $BASH_ENV
+            echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> $BASH_ENV
             mkdir .kaggle
-            mv kaggle.json .kaggle
+            mv BASH_ENV .kaggle
             kaggle competitions download titanic
             jupyter-nbconvert --execute Titanic.ipynb
             kaggle competitions submit titanic -f titanic-submission.csv -m "My submission"
