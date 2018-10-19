@@ -6,7 +6,7 @@ jobs:
       
     steps:
       - checkout
-echo
+      
       - run:
           name: install dependencies
           command: |
