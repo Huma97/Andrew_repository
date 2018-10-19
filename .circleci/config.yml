@@ -26,8 +26,10 @@ jobs:
           name: kaggle
           command: |
             . venv/bin/activate
-            export KAGGLE_USERNAME=huma97
-            export KAGGLE_KEY=07da689b628af9dbee0f5965ba1cf10f
+            mkdir .kaggle
+            mv kaggle.json .kaggle
+     #       export KAGGLE_USERNAME=huma97
+     #       export KAGGLE_KEY=07da689b628af9dbee0f5965ba1cf10f
             kaggle competitions download titanic
             jupyter-nbconvert --execute Titanic.ipynb
             kaggle competitions submit titanic -f titanic-submission.csv -m "My submission"
