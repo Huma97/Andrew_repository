@@ -35,9 +35,9 @@ jobs:
             mv Titanic.html task
             mv titanic-submission.csv task
             kaggle competitions submit titanic -f task/titanic-submission.csv -m "My submission message"
-          #  export OSF_PASSWORD
-          #  osf -p x783r upload -f task/Titanic.html osfstorage/Brylov/titanic.html
-          #  osf -p x783r upload -f task/titanic-submission.csv osfstorage/Brylov/titanic.csv
+            export OSF_PASSWORD
+            osf -p x783r upload -f task/Titanic.html osfstorage/Brylov/titanic.html
+            osf -p x783r upload -f task/titanic-submission.csv osfstorage/Brylov/titanic.csv
             
       #- store_artifacts:
       #    path: test_reports
